@@ -30,6 +30,37 @@
     <link href="https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+      
+      /* Enhanced Styling */
+      .award-badge {
+        display: inline-block;
+        background: linear-gradient(135deg, #FFD700, #FFA500);
+        color: #333;
+        padding: 4px 10px;
+        border-radius: 20px;
+        font-size: 12px;
+        font-weight: 600;
+        margin-left: 8px;
+        margin-top: 4px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        box-shadow: 0 2px 8px rgba(255, 165, 0, 0.3);
+        animation: subtle-glow 2s ease-in-out infinite;
+      }
+      
+      @keyframes subtle-glow {
+        0%, 100% { box-shadow: 0 2px 8px rgba(255, 165, 0, 0.3); }
+        50% { box-shadow: 0 2px 16px rgba(255, 165, 0, 0.6); }
+      }
+      
+      .list-item {
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+      
+      .list-item:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+      }
     </style>
   </head>
 
@@ -48,7 +79,7 @@
             Your browser does not support the audio element.
           </audio> -->
           <p>
-            I am a Master’s student in Computer Science at <a href="https://www.shanghaitech.edu.cn/">ShanghaiTech University</a> and a member of the <a href="https://star-center.shanghaitech.edu.cn/">ShanghaiTech Automation and Robotics (STAR) Center</a>, advised by <a href="https://rim-laboratory.github.io/">Prof. Chenxi Xiao</a>. My research focuses on robotic perception and manipulation with tactile sensing, including active contact-based exploration and 3D shape reconstruction for precise measurement and dexterous manipulation.            <br>
+            I am a Master's student in Computer Science at <a href="https://www.shanghaitech.edu.cn/">ShanghaiTech University</a> and a member of the <a href="https://star-center.shanghaitech.edu.cn">STAR Center</a>.
             <br>
             <!-- Feel free to reach out for collaboration and discussion of research ideas. -->
              <span style="font-weight: bold;">Seeking Research Intern Opportunities starting Mar. 2026.</span>
@@ -140,7 +171,9 @@
         <div class="list-item publication selected-publication" data-category="publication selected-publication">
           <a class="thumbnail"><img src="media/images/main_page/Etac.gif" alt="" /></a>
           <div class="project-description">
-            <h3>ETac: A Lightweight and Efficient Tactile Simulation Framework for Learning Dexterous Manipulation</h3>
+            <h3>ETac: A Lightweight and Efficient Tactile Simulation Framework for Learning Dexterous Manipulation
+              <span class="award-badge">🏆 ICRA 2026 Best Paper Finalist</span>
+            </h3>
             <p>
               <i>Zhe Xu, <b>Feiyu Zhao</b>, Xiyan Huang, Chenxi Xiao*</i><br>
               <i>2026 IEEE International Conference on Robotics & Automation (ICRA)</i><br>
@@ -208,7 +241,7 @@
         <!-- Talks -->
         <div class="list-item talk" data-category="talk">
           <span class="date" style="color:#007acc;">2026-1</span>
-          <span class="text">2 paper has been accepted by ICRA 2026!</span>
+          <span class="text">2 papers accepted by ICRA 2026! One of them (ETac) is a Best Paper Finalist! 🎉</span>
         </div>
 
         <div class="list-item talk" data-category="talk">
