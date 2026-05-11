@@ -308,24 +308,21 @@ h3 a:hover {
 }
 
 .award-badge {
-  display: inline-block;
-  margin-left: 0.45em;
-  padding: 0.06em 0.48em;
-  border: 1px solid #d6b45d;
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  margin: 0.32em 0 0.08em 0;
+  padding: 0.16em 0.66em;
+  border: 1px solid #d1a11f;
   border-radius: 999px;
-  background: #fffdf5;
-  color: #8b6508;
-  font-size: 0.78em;
-  font-weight: 600;
+  background: #fff8df;
+  color: #7a5200;
+  font-size: 0.9em;
+  font-weight: 700;
   font-style: normal;
   letter-spacing: 0.01em;
   white-space: nowrap;
   vertical-align: baseline;
-}
-
-.award-badge::before {
-  content: '★ ';
-  font-size: 0.9em;
 }
 
 /**************************************************/
