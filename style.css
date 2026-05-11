@@ -51,6 +51,7 @@ table {
   font-size: 1em;
   line-height: 1.5em;
   color: #150c21;
+  background: #ffffff;
 }
 
 #main {
@@ -300,6 +301,118 @@ h3 a:hover {
 .project-description {
   width: 80%;
   float: left;
+}
+
+/**************************************************/
+/* Refined publication cards and award badge. */
+
+.grid .list-item.publication {
+  box-sizing: border-box;
+  min-height: 8.6em;
+  margin-top: 1.15em;
+  margin-bottom: 0.85em;
+  padding: 0.95em 1.05em;
+  border: 1px solid #eceff3;
+  border-radius: 14px;
+  background: #ffffff;
+  box-shadow: 0 4px 14px rgba(21, 12, 33, 0.045);
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+}
+
+.grid .list-item.publication:hover {
+  transform: translateY(-2px);
+  border-color: #d6e7ff;
+  box-shadow: 0 10px 26px rgba(21, 12, 33, 0.085);
+}
+
+.grid .list-item.publication:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.grid .list-item.publication .thumbnail {
+  width: 18.5%;
+  margin-right: 2.5%;
+}
+
+.grid .list-item.publication .thumbnail img,
+.grid .list-item.publication .thumbnail video {
+  margin-top: 0.15em;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(21, 12, 33, 0.08);
+}
+
+.grid .list-item.publication .project-description {
+  width: 79%;
+}
+
+.grid .list-item.publication h3 {
+  margin-bottom: 0.28em;
+  color: #150c21;
+  font-weight: 600;
+  line-height: 1.36em;
+}
+
+.grid .list-item.publication p {
+  color: #667085;
+  line-height: 1.55em;
+}
+
+.grid .list-item.publication .project-description a {
+  display: inline-block;
+  margin-top: 0.35em;
+  margin-right: 0.28em;
+  padding: 0.08em 0.58em;
+  border: 1px solid #d7e4f2;
+  border-radius: 999px;
+  background: #f8fbff;
+  color: rgb(20, 110, 190);
+  font-size: 0.92em;
+  line-height: 1.55em;
+}
+
+.grid .list-item.publication .project-description a:hover {
+  border-bottom: 1px solid #9fc3ff;
+  border-color: #9fc3ff;
+  background: #eef6ff;
+}
+
+.grid .list-item.publication:has(.award-badge) {
+  border-left: 5px solid #d4a017;
+  background: linear-gradient(90deg, #fffaf0 0%, #ffffff 22%);
+}
+
+.project-description h3 .award-badge {
+  display: inline-block !important;
+  margin-left: 0.55em !important;
+  margin-top: 0.15em !important;
+  padding: 0.25em 0.72em !important;
+  border: 1px solid #e7c665 !important;
+  border-radius: 999px !important;
+  background: linear-gradient(135deg, #fff7d6, #ffe39a) !important;
+  color: #8a5a00 !important;
+  box-shadow: 0 2px 8px rgba(212, 160, 23, 0.18) !important;
+  font-size: 0.72em !important;
+  font-weight: 700 !important;
+  font-style: normal !important;
+  letter-spacing: 0.04em !important;
+  text-transform: uppercase !important;
+  vertical-align: middle !important;
+  white-space: nowrap !important;
+  animation: none !important;
+}
+
+.project-description h3 .award-badge::before {
+  content: '★';
+  margin-right: 0.38em;
+  font-size: 0.9em;
+}
+
+@supports not selector(:has(*)) {
+  .project-description h3 .award-badge {
+    display: inline-block !important;
+  }
 }
 
 /**************************************************/
