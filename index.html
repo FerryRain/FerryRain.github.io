@@ -28,87 +28,40 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-    <style>
-      @import url('https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
-      
-      /* Enhanced Styling */
-      .award-badge {
-        display: inline-block;
-        background: linear-gradient(135deg, #FFD700, #FFA500);
-        color: #333;
-        padding: 4px 10px;
-        border-radius: 20px;
-        font-size: 12px;
-        font-weight: 600;
-        margin-left: 8px;
-        margin-top: 4px;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-        box-shadow: 0 2px 8px rgba(255, 165, 0, 0.3);
-        animation: subtle-glow 2s ease-in-out infinite;
-      }
-      
-      @keyframes subtle-glow {
-        0%, 100% { box-shadow: 0 2px 8px rgba(255, 165, 0, 0.3); }
-        50% { box-shadow: 0 2px 16px rgba(255, 165, 0, 0.6); }
-      }
-      
-      .list-item {
-        transition: transform 0.2s ease, box-shadow 0.2s ease;
-      }
-      
-      .list-item:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
-      }
-    </style>
   </head>
 
   <body id="body">
-    
-
     <div id="main">
       <div id="intro">
         <div id="intro-text">
           <h1>Feiyu Zhao</h1>
-          <br>
-          <!-- <h2> <a href="#" id="toggleLink">How to pronounce?</a> </h2> -->
-          
-          <!-- <audio id="myAudioPlayer" style="display:none;" controls>
-            <source src="media/pronounce.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-          </audio> -->
-          <p>
+          <p class="bio-text">
             I am a Master's student in Computer Science at <a href="https://www.shanghaitech.edu.cn/">ShanghaiTech University</a> and a member of the <a href="https://star-center.shanghaitech.edu.cn">STAR Center</a>.
-            <br>
-            <!-- Feel free to reach out for collaboration and discussion of research ideas. -->
-             <span style="font-weight: bold;">Seeking Research Intern Opportunities starting Mar. 2026.</span>
-            <br>
+          </p>
+          <p class="status-line">Seeking Research Intern Opportunities starting Mar. 2026.</p>
+          <p class="contact-line">
             Email: zhaofy12024 [AT] shanghaitech.edu.cn
-            <br>
-            <br>
-            <a href="https://github.com/FerryRain">Github</a>&nbsp;&nbsp;&nbsp;&nbsp;
-            <a href="https://scholar.google.com/citations?user=Jiu0N9MAAAAJ&hl=en">Google Scholar</a>&nbsp;&nbsp;&nbsp;&nbsp;
+          </p>
+          <p class="profile-links">
+            <a href="https://github.com/FerryRain">Github</a>
+            <a href="https://scholar.google.com/citations?user=Jiu0N9MAAAAJ&hl=en">Google Scholar</a>
           </p>
         </div>
         <div id="intro-image">
-          <img src="media/images/main_page/1.jpg">
+          <img src="media/images/main_page/1.jpg" alt="Feiyu Zhao">
         </div>
       </div>
 
       <div id="filters" class="button-group">
-        <!-- <button class="button" data-filter="*">Show All</button> -->
         <button class="button is-checked" data-filter=".publication" id="research-btn">Research</button>
-<!--        <button class="button" data-filter=".patent">Patents</button>-->
         <button class="button" data-filter=".highlight">Honors</button>
         <button class="button" data-filter=".talk">News</button>
         <button class="button" data-filter=".misc">Services</button>
       </div>
 
-      <!-- new sub-buttons -->
       <div id="research-filters" class="button-group" style="margin: 10px 0; display: none;">
-        <button id="show-selected-btn" class="button is-checked">Show selected</button>
-        <button id="show-all-btn" class="button">Show all by date</button>
+        <button id="show-selected-btn" class="button is-checked">Selected</button>
+        <button id="show-all-btn" class="button">All by date</button>
       </div>
 
       <div class="grid">
@@ -116,216 +69,160 @@
         <!-- Publications -->
 
         <div class="list-item publication selected-publication" data-category="publication selected-publication">
-          <a class="thumbnail"><img src="media/images/main_page/AURORA.gif" alt="" /></a>
+          <a class="thumbnail"><img src="media/images/main_page/AURORA.gif" alt="AURORA project thumbnail" /></a>
           <div class="project-description">
             <h3>AURORA: Active Uncertainty-Driven Re-Orientation for In-Hand Reconstruction</h3>
             <p>
               <i><b>Feiyu Zhao^</b>, Yuetong Li^, Chenxi Xiao*</i><br>
               <i><sup>^</sup> Equal contribution.</i><br>
               <i>Under Review</i><br>
-<!--              <i>IEEE Robotics and Automation Letter (RA-L) </i><br>-->
-<!--              <i>Transfer to ICRA 2026</i><br>-->
-<!--             <a href="https://doi.org/10.1109/LRA.2025.3641100" target="_blank">PDF</a>-->
-<!--              &nbsp;|&nbsp;-->
               <a href="https://aurora-ano.github.io/" target="_blank">Webpage</a>
-              &nbsp;|&nbsp;
               <a href="https://github.com/FerryRain/Inhand_Activate" target="_blank">Code</a>
             </p>
           </div>
         </div>
 
         <div class="list-item publication selected-publication" data-category="publication selected-publication">
-          <a class="thumbnail"><img src="media/images/main_page/2025_RAL.gif" alt="" /></a>
+          <a class="thumbnail"><img src="media/images/main_page/Etac.gif" alt="ETac project thumbnail" /></a>
+          <div class="project-description">
+            <h3>ETac: A Lightweight and Efficient Tactile Simulation Framework for Learning Dexterous Manipulation</h3>
+            <p>
+              <i>Zhe Xu, <b>Feiyu Zhao</b>, Xiyan Huang, Chenxi Xiao*</i><br>
+              <i>2026 IEEE International Conference on Robotics & Automation (ICRA)</i>
+              <span class="award-badge">ICRA 2026 Best Paper Finalist</span><br>
+              <a href="https://arxiv.org/pdf/2604.20295" target="_blank">PDF</a>
+              <a href="https://lassford.github.io/ETac/" target="_blank">Webpage</a>
+              <a href="https://github.com/FerryRain/NLiPs" target="_blank">Code</a>
+            </p>
+          </div>
+        </div>
+
+        <div class="list-item publication selected-publication" data-category="publication selected-publication">
+          <a class="thumbnail"><img src="media/images/main_page/2025_RAL.gif" alt="Contact-guided exploration project thumbnail" /></a>
           <div class="project-description">
             <h3>Autonomous Exploration for Shape Reconstruction and Measurement via Informative Contact-Guided Planning</h3>
             <p>
               <i><b>Feiyu Zhao</b>, Chenxi Xiao*</i><br>
-              <i>IEEE Robotics and Automation Letter (RA-L) </i><br>
+              <i>IEEE Robotics and Automation Letter (RA-L)</i><br>
               <i>Transfer to ICRA 2026</i><br>
-             <a href="https://doi.org/10.1109/LRA.2025.3641100" target="_blank">PDF</a>
-              &nbsp;|&nbsp;
+              <a href="https://doi.org/10.1109/LRA.2025.3641100" target="_blank">PDF</a>
               <a href="https://aesrm.github.io/" target="_blank">Webpage</a>
-              &nbsp;|&nbsp;
               <a href="https://github.com/FerryRain/Autonomous-Exploration-for-Shape-Reconstruction" target="_blank">Code</a>
             </p>
           </div>
         </div>
 
         <div class="list-item publication selected-publication" data-category="publication selected-publication">
-          <a class="thumbnail"><img src="media/images/main_page/nlips.gif" alt="" /></a>
+          <a class="thumbnail"><img src="media/images/main_page/nlips.gif" alt="NLiPsCalib project thumbnail" /></a>
           <div class="project-description">
             <h3>NLiPsCalib: An Efficient Calibration Framework for High-Fidelity 3D Reconstruction of Curved Visuotactile Sensors</h3>
             <p>
               <i>Xuhao Qin^, <b>Feiyu Zhao^</b>, Yatao Leng, Runze Hu, Chenxi Xiao*</i><br>
               <i><sup>^</sup> Equal contribution.</i><br>
               <i>2026 IEEE International Conference on Robotics & Automation (ICRA)</i><br>
-            <a href="https://arxiv.org/pdf/2603.09319" target="_blank">PDF</a>
-              &nbsp;|&nbsp;
+              <a href="https://arxiv.org/pdf/2603.09319" target="_blank">PDF</a>
               <a href="https://nlipscalib.github.io/" target="_blank">Webpage</a>
-              &nbsp;|&nbsp;
               <a href="https://github.com/FerryRain/NLiPs" target="_blank">Code</a>
             </p>
           </div>
         </div>
 
         <div class="list-item publication selected-publication" data-category="publication selected-publication">
-          <a class="thumbnail"><img src="media/images/main_page/Etac.gif" alt="" /></a>
-          <div class="project-description">
-            <h3>ETac: A Lightweight and Efficient Tactile Simulation Framework for Learning Dexterous Manipulation
-              <span class="award-badge">🏆 ICRA 2026 Best Paper Finalist</span>
-            </h3>
-            <p>
-              <i>Zhe Xu, <b>Feiyu Zhao</b>, Xiyan Huang, Chenxi Xiao*</i><br>
-              <i>2026 IEEE International Conference on Robotics & Automation (ICRA)</i><br>
-             <a href="https://arxiv.org/pdf/2604.20295" target="_blank">PDF</a>
-              &nbsp;|&nbsp;
-              <a href="https://lassford.github.io/ETac/" target="_blank">Webpage</a>
-              &nbsp;|&nbsp;
-              <a href="https://github.com/FerryRain/NLiPs" target="_blank">Code</a>
-            </p>
-          </div>
-        </div>
-
-        <div class="list-item publication selected-publication" data-category="publication selected-publication">
-          <a class="thumbnail"><img src="media/images/main_page/2024_SR.jpg" alt="" /></a>
+          <a class="thumbnail"><img src="media/images/main_page/2024_SR.jpg" alt="UAV path planning project thumbnail" /></a>
           <div class="project-description">
             <h3>Autonomous localized path planning algorithm for UAVs based on TD3 strategy</h3>
             <p>
-              <i><b>Feiyu Zhao</b>, Li Dayan*, Wang Zhengxu, Mao Jianlin, Wang Niya </i><br>
+              <i><b>Feiyu Zhao</b>, Li Dayan*, Wang Zhengxu, Mao Jianlin, Wang Niya</i><br>
               <i>Scientific Reports</i><br>
               <a href="https://www.nature.com/articles/s41598-024-51349-4" target="_blank">PDF</a>
-              <!--              &nbsp;|&nbsp;-->
-<!--              <a href="https://aesrm.github.io/" target="_blank">Webpage</a>-->
-<!--              &nbsp;|&nbsp;-->
-<!--              <a href="https://github.com/FerryRain/Autonomous-Exploration-for-Shape-Reconstruction" target="_blank">Code</a>-->
             </p>
           </div>
         </div>
 
-         
-        <!-- honors -->
+        <!-- Honors -->
         <div id="main-highlights">
-
           <div class="list-item highlight" data-category="highlight">
-            <p class="date">2024</p>Award,  The Third Prize in 2024 ManiSkill ViTac Challenge, CVPR & ICRA Workshop
+            <p class="date">2024</p>Award, The Third Prize in 2024 ManiSkill ViTac Challenge, CVPR & ICRA Workshop
           </div>
 
           <div class="list-item highlight" data-category="highlight">
-            <p class="date">2023</p>Award,  The First Prize in the National University Computer Design Competition - Internet of Things Special Category
+            <p class="date">2023</p>Award, The First Prize in the National University Computer Design Competition - Internet of Things Special Category
           </div>
 
           <div class="list-item highlight" data-category="highlight">
-            <p class="date">2023</p>Award,  The Second Prize in the China National University Intelligent Vehicle Competition - Intelligent Warehousing
+            <p class="date">2023</p>Award, The Second Prize in the China National University Intelligent Vehicle Competition - Intelligent Warehousing
           </div>
 
           <div class="list-item highlight" data-category="highlight">
-            <p class="date">2023</p>Award,  The Second Prize in the National University Computer Design Competition - Artificial Intelligence Challenge
-          </div>
-
-
-          <div class="list-item highlight" data-category="highlight">
-            <p class="date">2023</p>Award,  The Second Prize in the China National University Intelligent Robot Innovation Competition
+            <p class="date">2023</p>Award, The Second Prize in the National University Computer Design Competition - Artificial Intelligence Challenge
           </div>
 
           <div class="list-item highlight" data-category="highlight">
-            <p class="date">2023</p>Award,  The Third Prize in the China National University Intelligent Vehicle Competition - Aerospace Logistics
+            <p class="date">2023</p>Award, The Second Prize in the China National University Intelligent Robot Innovation Competition
           </div>
 
           <div class="list-item highlight" data-category="highlight">
-            <p class="date">2022</p>Award,  The First Prize in the RoboCom - Robot Developers Contest
+            <p class="date">2023</p>Award, The Third Prize in the China National University Intelligent Vehicle Competition - Aerospace Logistics
           </div>
 
+          <div class="list-item highlight" data-category="highlight">
+            <p class="date">2022</p>Award, The First Prize in the RoboCom - Robot Developers Contest
+          </div>
         </div>
 
-
-        <!-- Talks -->
+        <!-- News -->
         <div class="list-item talk" data-category="talk">
-          <span class="date" style="color:#007acc;">2026-1</span>
-          <span class="text">2 papers accepted by ICRA 2026! One of them (ETac) is a Best Paper Finalist! 🎉</span>
+          <span class="date">2026-01</span>
+          <span class="text">Two papers accepted by ICRA 2026; ETac was selected as an ICRA 2026 Best Paper Finalist.</span>
         </div>
 
         <div class="list-item talk" data-category="talk">
-          <span class="date" style="color:#007acc;">2025-12</span>
-          <span class="text">1 paper has been accepted by RA-L!</span>
+          <span class="date">2025-12</span>
+          <span class="text">One paper accepted by RA-L.</span>
         </div>
 
         <div class="list-item talk" data-category="talk">
-          <span class="date" style="color:#007acc;">2024-01</span>
-          <span class="text"> 1 paper has been accepted by Scientific Reports!</span>
+          <span class="date">2024-01</span>
+          <span class="text">One paper accepted by Scientific Reports.</span>
         </div>
-
 
         <div class="list-item misc" data-category="misc">
-          <p class="date"></p>Journal Reviewer, RAL
+          <p class="date"></p>Journal Reviewer, RA-L
         </div>
 
         <div class="list-item misc" data-category="misc">
           <p class="date"></p>Conference Reviewer, ICRA, CDC
         </div>
-
-<!--        <div class="list-item misc" data-category="misc">-->
-<!--          <p class="date"></p>Member, IEEE-->
-<!--        </div>-->
-
-      </div>
-      
-
-      <div id="footer">  
-      Pageviews: <a href="https://www.easycounter.com/">
-<img src="https://www.easycounter.com/counter.php?ferryzhao"
-border="0" alt="Free Web Counter"></a>
-
-      <br>
-      Feel free to use this website's <a href="https://github.com/dengyh16code/dengyh16code.github.io">source code</a>. Inspired by <a href="https://andyzeng.github.io/">Andy's website</a>.
       </div>
 
+      <div id="footer">
+        Pageviews: <a href="https://www.easycounter.com/"><img src="https://www.easycounter.com/counter.php?ferryzhao" border="0" alt="Free Web Counter"></a>
+        <br>
+        Feel free to use this website's <a href="https://github.com/dengyh16code/dengyh16code.github.io">source code</a>. Inspired by <a href="https://andyzeng.github.io/">Andy's website</a>.
+      </div>
     </div>
 
     <script>
-
-      // Isotope grid.
       var $grid = $('.grid').isotope({
         itemSelector: '.list-item',
         layoutMode: 'fitRows',
         transitionDuration: 0,
         stagger: 10,
-        initLayout: false,
-        getSortData: {
-          name: '.name',
-          symbol: '.symbol',
-          number: '.number parseInt',
-          category: '[data-category]',
-          weight: function( itemElem ) {
-            var weight = $( itemElem ).find('.weight').text();
-            return parseFloat( weight.replace( /[\(\)]/g, '') );
-        $('#show-selected-btn').addClass('is-checked');
-        $('#show-all-btn').removeClass('is-checked');
-        $('#show-selected-btn').css('background-color', 'black');
-        $('#show-selected-btn').css('color', 'white');
-        $('#research-filters').show();
-        $('#research-btn').addClass('is-checked');
-        $grid.isotope({ filter: '.selected-publication' });
-        }
-        }
+        initLayout: false
       });
 
-      // Toggle sub-buttons visibility
       $('#research-btn').on('click', function() {
-        console.log('Research button clicked');
-        $('#research-filters').toggle();
-        $grid.isotope({ filter: '.selected-publication' });
+        $('#research-filters').show();
         $('#show-selected-btn').addClass('is-checked');
         $('#show-all-btn').removeClass('is-checked');
+        $grid.isotope({ filter: '.selected-publication' });
       });
 
-      // Bind sub-button click
       $('#show-selected-btn').on('click', function() {
-        // Logic to show selected publications
         $grid.isotope({ filter: '.selected-publication' });
       });
 
       $('#show-all-btn').on('click', function() {
-        // Logic to show all publications sorted by date
         $grid.isotope({ filter: '.publication' });
       });
 
@@ -333,50 +230,30 @@ border="0" alt="Free Web Counter"></a>
         var filterValue = $(this).attr('data-filter');
         if (filterValue === '.publication') {
           $('#research-filters').show();
+          $grid.isotope({ filter: '.selected-publication' });
         } else {
           $('#research-filters').hide();
+          $grid.isotope({ filter: filterValue });
         }
-              var filterValue = $( this ).attr('data-filter');
-              localStorage.setItem('filterValue', filterValue);
-              $grid.isotope({ filter: filterValue });
-            });
+      });
 
-       // Change is-checked class on buttons.
-      $('.button-group').each( function( i, buttonGroup ) {
-        var $buttonGroup = $( buttonGroup );
-        $buttonGroup.on( 'click', 'button', function() {
+      $('.button-group').each(function(i, buttonGroup) {
+        var $buttonGroup = $(buttonGroup);
+        $buttonGroup.on('click', 'button', function() {
           $buttonGroup.find('.is-checked').removeClass('is-checked');
-          $( this ).addClass('is-checked');
+          $(this).addClass('is-checked');
         });
       });
 
       function update_isotope() {
-        const defaultFilter = '.selected-publication';
-        const defaultMainFilter = '.publication';
-
-        // Set Research button as active
         $('#research-btn').addClass('is-checked');
-        // Show research filters
         $('#research-filters').show();
-
-        // Set sub-filter
         $('#show-selected-btn').addClass('is-checked');
         $('#show-all-btn').removeClass('is-checked');
-
-        // Apply filter to show selected publications only
-        $grid.isotope({ filter: defaultFilter });
+        $grid.isotope({ filter: '.selected-publication' });
       }
 
-      // document.getElementById("toggleLink").addEventListener("click", function(event) {
-      // event.preventDefault(); // Prevent the default anchor link behavior
-      // var audioPlayer = document.getElementById("myAudioPlayer");
-      // audioPlayer.style.display = audioPlayer.style.display === "none" ? "block" : "none";
-      // });
-
-
-
       update_isotope();
-
     </script>
   </body>
 </html>
