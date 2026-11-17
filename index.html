@@ -58,16 +58,22 @@
         <button class="button" data-filter=".misc">Services</button>
       </div>
 
-      <div id="research-filters" class="button-group" style="margin: 10px 0; display: none;">
-        <button id="show-selected-btn" class="button is-checked">Selected</button>
-        <button id="show-all-btn" class="button">All by date</button>
-      </div>
-
       <div class="grid">
 
-        <!-- Publications -->
+        <!-- Research: Under Review -->
+        <div class="list-item publication publication-section" data-category="publication">
+          <h2>Under Review</h2>
+        </div>
+        <div class="list-item publication review-note" data-category="publication">
+          <p>Manuscripts are currently under review. Details will be shared after the review process.</p>
+        </div>
 
-        <div class="list-item publication selected-publication" data-category="publication selected-publication">
+        <!-- Research: Published & Accepted -->
+        <div class="list-item publication publication-section" data-category="publication">
+          <h2>Published &amp; Accepted</h2>
+        </div>
+
+        <div class="list-item publication" data-category="publication">
           <a class="thumbnail"><img src="media/images/main_page/AURORA.gif" alt="AURORA project thumbnail" /></a>
           <div class="project-description">
             <h3>AURORA: Active Uncertainty-Driven Re-Orientation for In-Hand Reconstruction</h3>
@@ -82,7 +88,7 @@
           </div>
         </div>
 
-        <div class="list-item publication selected-publication" data-category="publication selected-publication">
+        <div class="list-item publication" data-category="publication">
           <a class="thumbnail"><img src="media/images/main_page/Etac.gif" alt="ETac project thumbnail" /></a>
           <div class="project-description">
             <h3>ETac: A Lightweight and Efficient Tactile Simulation Framework for Learning Dexterous Manipulation</h3>
@@ -97,7 +103,7 @@
           </div>
         </div>
 
-        <div class="list-item publication selected-publication" data-category="publication selected-publication">
+        <div class="list-item publication" data-category="publication">
           <a class="thumbnail"><img src="media/images/main_page/2025_RAL.gif" alt="Contact-guided exploration project thumbnail" /></a>
           <div class="project-description">
             <h3>Autonomous Exploration for Shape Reconstruction and Measurement via Informative Contact-Guided Planning</h3>
@@ -112,7 +118,7 @@
           </div>
         </div>
 
-        <div class="list-item publication selected-publication" data-category="publication selected-publication">
+        <div class="list-item publication" data-category="publication">
           <a class="thumbnail"><img src="media/images/main_page/nlips.gif" alt="NLiPsCalib project thumbnail" /></a>
           <div class="project-description">
             <h3>NLiPsCalib: An Efficient Calibration Framework for High-Fidelity 3D Reconstruction of Curved Visuotactile Sensors</h3>
@@ -127,7 +133,7 @@
           </div>
         </div>
 
-        <div class="list-item publication selected-publication" data-category="publication selected-publication">
+        <div class="list-item publication" data-category="publication">
           <a class="thumbnail"><img src="media/images/main_page/2024_SR.jpg" alt="UAV path planning project thumbnail" /></a>
           <div class="project-description">
             <h3>Autonomous localized path planning algorithm for UAVs based on TD3 strategy</h3>
@@ -225,30 +231,9 @@
         initLayout: false
       });
 
-      $('#research-btn').on('click', function() {
-        $('#research-filters').show();
-        $('#show-selected-btn').addClass('is-checked');
-        $('#show-all-btn').removeClass('is-checked');
-        $grid.isotope({ filter: '.selected-publication' });
-      });
-
-      $('#show-selected-btn').on('click', function() {
-        $grid.isotope({ filter: '.selected-publication' });
-      });
-
-      $('#show-all-btn').on('click', function() {
-        $grid.isotope({ filter: '.publication' });
-      });
-
       $('#filters').on('click', 'button', function() {
         var filterValue = $(this).attr('data-filter');
-        if (filterValue === '.publication') {
-          $('#research-filters').show();
-          $grid.isotope({ filter: '.selected-publication' });
-        } else {
-          $('#research-filters').hide();
-          $grid.isotope({ filter: filterValue });
-        }
+        $grid.isotope({ filter: filterValue });
       });
 
       $('.button-group').each(function(i, buttonGroup) {
@@ -261,10 +246,7 @@
 
       function update_isotope() {
         $('#research-btn').addClass('is-checked');
-        $('#research-filters').show();
-        $('#show-selected-btn').addClass('is-checked');
-        $('#show-all-btn').removeClass('is-checked');
-        $grid.isotope({ filter: '.selected-publication' });
+        $grid.isotope({ filter: '.publication' });
       }
 
       update_isotope();
