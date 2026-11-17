@@ -325,6 +325,35 @@ h3 a:hover {
   vertical-align: baseline;
 }
 
+/* Research group headings */
+.publication-section {
+  min-height: 0;
+  margin-top: 1.45em;
+  margin-bottom: 0.1em;
+  padding: 0.2em 0 0.48em;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.publication-section h2 {
+  font-size: 1.2em;
+  font-weight: 600;
+  line-height: 1.4;
+  color: #172033;
+  letter-spacing: -0.01em;
+}
+
+.review-note {
+  min-height: 0;
+  margin-top: 0.1em;
+  margin-bottom: 0.75em;
+  padding: 0.5em 0 0.6em;
+  border-bottom: 0;
+}
+
+.review-note p {
+  color: #667085;
+}
+
 /**************************************************/
 /* Honors, news, services */
 
